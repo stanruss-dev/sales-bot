@@ -130,13 +130,13 @@ cp .env.example .env
 
 ```env
 TELEGRAM_BOT_TOKEN=your_telegram_bot_token
-ANTHROPIC_API_KEY=your_anthropic_api_key
+OPENROUTER_API_KEY=your_openrouter_api_key
 MANAGER_CHAT_ID=your_telegram_id  # для уведомлений о горячих лидах
 ```
 
 Получить токены:
 - **Telegram Bot Token** → [@BotFather](https://t.me/BotFather)
-- **Anthropic API Key** → [console.anthropic.com](https://console.anthropic.com)
+- **OpenRouter API Key** → [openrouter.ai/keys](https://openrouter.ai/keys)
 
 ### 4. Заполните базу знаний
 
@@ -206,9 +206,9 @@ python main.py
 | Переменная | Описание | По умолчанию |
 |---|---|---|
 | `TELEGRAM_BOT_TOKEN` | Токен Telegram-бота | обязательно |
-| `ANTHROPIC_API_KEY` | Ключ Claude API | обязательно |
+| `OPENROUTER_API_KEY` | Ключ OpenRouter API | обязательно |
 | `MANAGER_CHAT_ID` | Telegram ID менеджера | опционально |
-| `AI_MODEL` | Модель Claude | `claude-sonnet-4-6` |
+| `AI_MODEL` | Модель через OpenRouter | `openai/gpt-4o-mini` |
 | `MAX_HISTORY` | История сообщений | `10` |
 | `LOG_LEVEL` | Уровень логов | `INFO` |
 
