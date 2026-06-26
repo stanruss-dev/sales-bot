@@ -22,6 +22,10 @@ logs/
 !logs/.gitkeep
 *.log
 
+# Learning database
+data/*.db
+!data/.gitkeep
+
 # OS
 .DS_Store
 Thumbs.db

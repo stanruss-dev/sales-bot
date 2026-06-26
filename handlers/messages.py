@@ -3,6 +3,7 @@ from aiogram.types import Message
 from config.settings import settings
 from utils.sales_funnel import get_session, FunnelStage
 from utils.ai_client import get_ai_response
+from utils.learning import record_signals
 
 router = Router()
 
@@ -14,6 +15,9 @@ async def message_handler(message: Message, bot: Bot):
 
     # Add user message to history
     session.add_message("user", message.text)
+
+    # Record customer signals for self-learning
+    await record_signals(user_id, message.text)
 
     # Get AI response
     await message.chat.do("typing")
